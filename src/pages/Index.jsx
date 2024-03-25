@@ -24,19 +24,19 @@ import { initUser } from '../store/actions/user.actions.js';
 import { store } from '../store/store.js';
 import { playerService } from '../services/player.service.js';
 
-const MIN_NAV_WIDTH = 280 // px
-const MAX_NAV_WIDTH = window.innerWidth - 500 - 20 // px
 
 export const Index = () => {
     const params = useParams();
     const [filterBy, setFilterBy] = useState(stationService.getDefaultFilter(params));
     const [currentCategory, setCurrentCategory] = useState(null);
     
+    const MIN_NAV_WIDTH = 280 // px
+    let MAX_NAV_WIDTH = window.innerWidth - 650 - 20 // px
     const [isResizing, setIsResizing] = useState(false);
     const [sideNavWidth, setSideNavWidth] = useState(MIN_NAV_WIDTH)
-
+    
     const currentTrack = useSelector(state => state.queueModule.currentTrack.track)
-
+    
     const navigate = useNavigate();
 
 

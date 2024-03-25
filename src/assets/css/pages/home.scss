@@ -13,5 +13,12 @@
     img {
       width: 500px;
     }
+
+    .head-stations {
+      padding: 11px;
+      display: grid;
+      grid-template-columns: repeat(3, minmax(198px, 1fr));
+      gap: 8px;
+    }
   }
   
